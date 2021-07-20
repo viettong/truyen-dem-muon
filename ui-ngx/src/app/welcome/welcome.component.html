@@ -1,0 +1,16 @@
+<h1>Welcome</h1>
+<div class="container">
+  <p>welcome {{name}} To our awsome app</p>
+  You can manager your todos <a routerLink="/todos">here</a>
+  <hr>
+  You can switch user <a routerLink="/welcome/vincent"> here</a>
+</div>
+
+<div class="container">
+  Click here to get Cutomize message
+  <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">get welcome message</button>
+</div>
+<hr>
+<div class="container" *ngIf="welcomeMessageFromService">
+  Messenge from service {{welcomeMessageFromService}}
+</div>
